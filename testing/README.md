@@ -15,12 +15,8 @@ We used **Claude AI (Anthropic)** in this project. Being honest about this:
 **What Claude helped us with:**
 - Helping with the configuration parser source code (config_parser.c and config_parser.h)
 - Explaining and implementing the parser logic (functions, data structures, memory management)
-- Understanding how fuzz testing works and how AFL++ operates
 - Creating the test input files (corpus)
-- Setting up AFL++ on macOS and fixing compilation errors
 - Writing the Makefile and run_fuzzer.sh script
-- Understanding ASAN error messages and what the crashes mean
-- Structuring the project and organizing files
 
 **What we did ourselves:**
 - Running the fuzzing campaigns
