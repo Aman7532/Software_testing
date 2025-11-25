@@ -1,0 +1,9 @@
+# Boundary values for numbers
+zero = 0
+max_int = 2147483647
+min_int = -2147483648
+very_large = 9999999999999999
+very_small = -9999999999999999
+tiny_float = 0.000000001
+huge_float = 999999999.999999999
+

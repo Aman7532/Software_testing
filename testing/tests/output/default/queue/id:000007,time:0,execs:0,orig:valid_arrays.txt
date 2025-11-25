@@ -1,0 +1,9 @@
+# Configuration with arrays
+allowed_hosts = [localhost, example.com, api.example.com]
+ports = [8080, 8081, 8082]
+coefficients = [1.5, 2.3, 3.7, 4.2]
+flags = [true, false, true]
+
+[features]
+enabled_modules = [auth, logging, api, database]
+

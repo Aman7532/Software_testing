@@ -1,0 +1,6 @@
+# Simple configuration file
+name = MyApplication
+version = 1.0
+port = 8080
+debug = true
+

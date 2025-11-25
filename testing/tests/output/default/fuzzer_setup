@@ -1,0 +1,10 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./build/config_parser_fuzz
+AFL_CUSTOM_INFO_PROGRAM_ARGV=@@
+AFL_CUSTOM_INFO_OUT=tests/output/default
+AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+AFL_NO_AFFINITY=1
+AFL_NO_FORKSRV=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'AFLplusplus/afl-fuzz' '-i' 'tests/corpus' '-o' 'tests/output' '-V' '20' '-m' 'none' '-t' '5000' '--' './build/config_parser_fuzz' '@@'

@@ -1,0 +1,5 @@
+# Long values to test buffer handling
+long_string = "This is a very long string value that contains many characters and might test buffer boundaries in the parser implementation to see how it handles longer input values"
+very_long_key_name_that_might_exceed_normal_limits = value
+long_array = [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15]
+

@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'build/config_parser_fuzz'
+relocations:     []
+...

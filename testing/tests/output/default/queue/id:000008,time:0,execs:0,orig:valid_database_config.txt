@@ -1,0 +1,17 @@
+# Database configuration
+[database]
+host = localhost
+port = 5432
+username = dbuser
+password = secure_password_123
+database_name = production_db
+connection_timeout = 30
+max_connections = 100
+ssl_enabled = true
+pool_size = 10
+
+[database.backup]
+enabled = true
+schedule = daily
+retention_days = 7
+

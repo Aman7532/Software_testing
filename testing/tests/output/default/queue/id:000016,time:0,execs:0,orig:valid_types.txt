@@ -1,0 +1,11 @@
+# Different data types
+string_value = "Hello World"
+integer_value = 42
+negative_int = -100
+float_value = 3.14159
+scientific = 1.23e-4
+bool_true = true
+bool_false = false
+bool_yes = yes
+bool_no = no
+

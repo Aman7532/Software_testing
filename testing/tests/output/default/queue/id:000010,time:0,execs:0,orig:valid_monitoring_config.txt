@@ -1,0 +1,27 @@
+# Monitoring configuration
+[monitoring]
+enabled = true
+interval = 60
+retention_period = 2592000
+
+[monitoring.metrics]
+cpu = true
+memory = true
+disk = true
+network = true
+custom_metrics = [response_time, error_rate, throughput]
+
+[monitoring.alerts]
+email_enabled = true
+email_recipients = [admin@example.com, ops@example.com]
+slack_enabled = true
+slack_webhook = https://hooks.slack.com/services/ABC123/DEF456/XYZ789
+
+[monitoring.thresholds]
+cpu_warning = 70
+cpu_critical = 90
+memory_warning = 80
+memory_critical = 95
+disk_warning = 75
+disk_critical = 90
+

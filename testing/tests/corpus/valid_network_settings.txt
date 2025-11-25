@@ -1,0 +1,20 @@
+# Network settings
+[network]
+interface = eth0
+ip_address = 192.168.1.100
+netmask = 255.255.255.0
+gateway = 192.168.1.1
+dns_servers = [8.8.8.8, 8.8.4.4, 1.1.1.1]
+mtu = 1500
+
+[network.proxy]
+enabled = false
+http_proxy = http://proxy.example.com:8080
+https_proxy = https://proxy.example.com:8443
+no_proxy = [localhost, 127.0.0.1, .local]
+
+[network.firewall]
+enabled = true
+default_policy = deny
+allowed_ports = [22, 80, 443, 8080]
+

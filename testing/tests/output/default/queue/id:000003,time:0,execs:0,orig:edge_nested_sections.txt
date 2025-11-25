@@ -1,0 +1,12 @@
+[section1]
+key1 = value1
+
+[section2]
+key2 = value2
+
+[section1]
+key3 = value3
+
+[section3.subsection]
+nested_key = nested_value
+

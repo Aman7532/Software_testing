@@ -1,0 +1,3 @@
+# Empty configuration file with only comments
+# This tests handling of empty input
+

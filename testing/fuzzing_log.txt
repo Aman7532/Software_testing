@@ -1,0 +1,124 @@
+[1;92m[+] [0mEnabled environment variable AFL_SKIP_CPUFREQ with value 1[0m
+[1;92m[+] [0mEnabled environment variable AFL_NO_AFFINITY with value 1[0m
+[1;92m[+] [0mEnabled environment variable AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES with value 1[0m
+[0;36mafl-fuzz++4.35a[0m based on afl by Michal Zalewski and a large online community
+[1;92m[+] [0mAFL++ is maintained by Marc "van Hauser" Heuse, Dominik Maier, Andrea Fioraldi and Heiko "hexcoder" Eißfeldt[0m
+[1;92m[+] [0mAFL++ is open source, get it at https://github.com/AFLplusplus/AFLplusplus[0m
+[1;92m[+] [0mNOTE: AFL++ >= v3 has changed defaults and behaviours - see README.md[0m
+[1;92m[+] [0mEnabled environment variable ASAN_OPTIONS with value detect_leaks=0:symbolize=0:abort_on_error=1[0m
+[1;92m[+] [0mNo -M/-S set, autoconfiguring for "-S default"[0m
+[1;94m[*] [0mGetting to work...[0m
+[1;92m[+] [0mUsing exploration-based constant power schedule (EXPLORE)[0m
+[1;92m[+] [0mEnabled environment variable AFL_NO_FORKSRV with value 1[0m
+[1;92m[+] [0mEnabled testcache with 50 MB[0m
+[1;92m[+] [0mGenerating fuzz data with a length of min=1 max=1048576[0m
+[1;92m[+] [0mLooks like we're not running on a tty, so I'll be a bit less verbose.[0m
+[1;92m[+] [0mYou have 8 CPU cores and 4 runnable tasks (utilization: 50%).[0m
+[1;92m[+] [0mTry parallel jobs - see docs/fuzzing_in_depth.md#c-using-multiple-cores[0m
+[1;94m[*] [0mSetting up output directories...[0m
+[1;92m[+] [0mOutput directory exists but deemed OK to reuse.[0m
+[1;94m[*] [0mDeleting old session data...[0m
+[1;92m[+] [0mOutput dir cleanup successful.[0m
+[1;94m[*] [0mValidating target binary...[0m
+[1;94m[*] [0mScanning 'tests/corpus'...[0m
+[1;94m[*] [0mCreating hard links for all input files...[0m
+[1;92m[+] [0mLoaded a total of 18 seeds.[0m
+[1;94m[*] [0mSpinning up the fork server...[0m
+[1;94m[*] [0mUsing AFL++ faux forkserver...[0m
+[1;93m[!] [1;97mWARNING: [0mOld fork server model is used by the target, this still works though.[0m
+[1;92m[+] [0mAll right - old fork server is up.[0m
+[1;94m[*] [0mNo auto-generated dictionary tokens to reuse.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000000,time:0,execs:0,orig:boundary_numbers.txt'...[0m
+[1;90m    len = 202, map size = 154, exec speed = 170970 us, hash = 33ac86d90c7bc9de
+[0m[1;94m[*] [0mAttempting dry run with 'id:000001,time:0,execs:0,orig:edge_empty.txt'...[0m
+[1;90m    len = 84, map size = 56, exec speed = 38840 us, hash = fcfdb2d7bfe60eb4
+[0m[1;94m[*] [0mAttempting dry run with 'id:000002,time:0,execs:0,orig:edge_long_values.txt'...[0m
+
+[1;91m[-] [0mOops, the program crashed with one of the test cases provided. There are
+    several possible explanations:
+
+    - The test case causes known crashes under normal working conditions. If
+      so, please remove it. The fuzzer should be seeded with interesting
+      inputs - but not ones that cause an outright crash.
+
+    - In QEMU persistent mode the selected address(es) for the loop are not
+      properly cleaning up variables and memory. Try adding
+      AFL_QEMU_PERSISTENT_GPR=1 or select better addresses in the binary.
+
+    - On MacOS X, the semantics of fork() syscalls are non-standard and may
+      break afl-fuzz performance optimizations when running platform-specific
+      targets. To fix this, set AFL_NO_FORKSRV=1 in the environment.
+
+    - Least likely, there is a horrible bug in the fuzzer. If other options
+      fail, poke the Awesome Fuzzing Discord for troubleshooting tips.
+[1;93m[!] [1;97mWARNING: [0mTest case 'id:000002,time:0,execs:0,orig:edge_long_values.txt' results in a crash, skipping[0m
+[1;94m[*] [0mAttempting dry run with 'id:000003,time:0,execs:0,orig:edge_nested_sections.txt'...[0m
+[1;90m    len = 127, map size = 150, exec speed = 39981 us, hash = 7a467f4ea214edf5
+[0m[1;94m[*] [0mAttempting dry run with 'id:000004,time:0,execs:0,orig:edge_special_chars.txt'...[0m
+[1;90m    len = 157, map size = 147, exec speed = 39869 us, hash = 38bf6a435c16d8ff
+[0m[1;94m[*] [0mAttempting dry run with 'id:000005,time:0,execs:0,orig:stress_many_entries.txt'...[0m
+[1;90m    len = 333, map size = 145, exec speed = 39367 us, hash = c4eabc8fb020dd01
+[0m[1;94m[*] [0mAttempting dry run with 'id:000006,time:0,execs:0,orig:valid_application_settings.txt'...[0m
+[1;90m    len = 404, map size = 177, exec speed = 38675 us, hash = b9aec805fcb74dcf
+[0m[1;94m[*] [0mAttempting dry run with 'id:000007,time:0,execs:0,orig:valid_arrays.txt'...[0m
+[1;90m    len = 239, map size = 233, exec speed = 37250 us, hash = 0339c1e1298cb4af
+[0m[1;94m[*] [0mAttempting dry run with 'id:000008,time:0,execs:0,orig:valid_database_config.txt'...[0m
+[1;90m    len = 295, map size = 167, exec speed = 37040 us, hash = e80b9c67c905b626
+[0m[1;94m[*] [0mAttempting dry run with 'id:000009,time:0,execs:0,orig:valid_mixed_types.txt'...[0m
+[1;90m    len = 551, map size = 254, exec speed = 36827 us, hash = 2d634773c4dca159
+[0m[1;94m[*] [0mAttempting dry run with 'id:000010,time:0,execs:0,orig:valid_monitoring_config.txt'...[0m
+[1;90m    len = 555, map size = 201, exec speed = 36498 us, hash = b3aee1f0fe93b12c
+[0m[1;94m[*] [0mAttempting dry run with 'id:000011,time:0,execs:0,orig:valid_network_settings.txt'...[0m
+[1;90m    len = 429, map size = 221, exec speed = 37414 us, hash = bdb5a8b9949e5d84
+[0m[1;94m[*] [0mAttempting dry run with 'id:000012,time:0,execs:0,orig:valid_sections.txt'...[0m
+[1;90m    len = 258, map size = 173, exec speed = 36658 us, hash = 8b0d2b5afc759508
+[0m[1;94m[*] [0mAttempting dry run with 'id:000013,time:0,execs:0,orig:valid_security_policy.txt'...[0m
+
+[1;91m[-] [0mOops, the program crashed with one of the test cases provided. There are
+    several possible explanations:
+
+    - The test case causes known crashes under normal working conditions. If
+      so, please remove it. The fuzzer should be seeded with interesting
+      inputs - but not ones that cause an outright crash.
+
+    - In QEMU persistent mode the selected address(es) for the loop are not
+      properly cleaning up variables and memory. Try adding
+      AFL_QEMU_PERSISTENT_GPR=1 or select better addresses in the binary.
+
+    - On MacOS X, the semantics of fork() syscalls are non-standard and may
+      break afl-fuzz performance optimizations when running platform-specific
+      targets. To fix this, set AFL_NO_FORKSRV=1 in the environment.
+
+    - Least likely, there is a horrible bug in the fuzzer. If other options
+      fail, poke the Awesome Fuzzing Discord for troubleshooting tips.
+[1;93m[!] [1;97mWARNING: [0mTest case 'id:000013,time:0,execs:0,orig:valid_security_policy.txt' results in a crash, skipping[0m
+[1;94m[*] [0mAttempting dry run with 'id:000014,time:0,execs:0,orig:valid_server_config.txt'...[0m
+[1;90m    len = 371, map size = 207, exec speed = 38658 us, hash = b6d1dbf90c82fb7d
+[0m[1;94m[*] [0mAttempting dry run with 'id:000015,time:0,execs:0,orig:valid_simple.txt'...[0m
+[1;90m    len = 89, map size = 170, exec speed = 37394 us, hash = 902159de040c46af
+[0m[1;94m[*] [0mAttempting dry run with 'id:000016,time:0,execs:0,orig:valid_types.txt'...[0m
+[1;90m    len = 199, map size = 173, exec speed = 38791 us, hash = d8f947431fccb0ca
+[0m[1;94m[*] [0mAttempting dry run with 'id:000017,time:0,execs:0,orig:valid_user_preferences.txt'...[0m
+[1;90m    len = 352, map size = 174, exec speed = 38532 us, hash = 44b8e288f949f79d
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;92m[+] [0mAll test cases processed.[0m
+[1;93m[!] [1;97mWARNING: [0m[1;91mThe target binary is pretty slow! See docs/fuzzing_in_depth.md#i-improve-the-speed[0m
+[1;93m[!] [1;97mWARNING: [0m[1;91mSome test cases look useless. Consider using a smaller set.[0m
+[1;92m[+] [0mHere are some useful stats:
+
+[1;90m    Test case count : [0m9 favored, 0 variable, 2 ignored, 18 total
+[1;90m       Bitmap range : [0m56 to 254 bits (average: 175.12 bits)
+[1;90m        Exec timing : [0m36.5k to 170k us (average: 46.4k us)
+[0m
+[1;94m[*] [0m-t option specified. We'll use an exec timeout of 5000 ms.[0m
+[1;92m[+] [0mAll set and ready to roll![0m
+[1;94m[*] [0mFuzzing test case #1 (18 total, 0 crashes saved[0m, state: started :-), mode=explore, perf_score=100, weight=1, favorite=1, was_fuzzed=0, exec_us=38840, hits=0, map=56, ascii=0, run_time=0:00:00:00)...[0m
+[?25h[1;91m
+
++++ Testing aborted programmatically +++
+[0m[1;93m[!] [0mTime limit was reached
+[1;94m[*] [0mStatistics: 14 new corpus items found, 0.43% coverage achieved, 0 crashes saved, 0 timeouts saved, total runtime 0 days, 0 hrs, 0 min, 20 sec[0m
+[1;94m[*] [0mWriting tests/output/default/fastresume.bin ...[0m
+[1;92m[+] [0mfastresume.bin successfully written with 388136 bytes.[0m
+[1;92m[+] [0mWe're done here. Have a nice day!
+[0m

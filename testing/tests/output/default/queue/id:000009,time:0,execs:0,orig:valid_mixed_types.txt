@@ -1,0 +1,25 @@
+# Mixed data types configuration
+string_value = Hello World
+integer_value = 42
+float_value = 3.14159
+boolean_true = true
+boolean_false = false
+negative_int = -100
+scientific_notation = 1.23e-4
+zero = 0
+
+[arrays]
+string_array = [one, two, three, four, five]
+int_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+float_array = [1.1, 2.2, 3.3, 4.4, 5.5]
+bool_array = [true, false, true, true, false]
+mixed_size_array = [a, bb, ccc, dddd, eeeee]
+
+[nested_sections.subsection1]
+key1 = value1
+key2 = value2
+
+[nested_sections.subsection2]
+key3 = value3
+key4 = value4
+

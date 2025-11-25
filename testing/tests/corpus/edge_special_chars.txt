@@ -1,0 +1,6 @@
+# Special characters
+path = "/usr/local/bin"
+regex = "^[a-zA-Z0-9]+$"
+url = "https://example.com/api?key=value&test=123"
+escape_test = "Line with\nnewline"
+

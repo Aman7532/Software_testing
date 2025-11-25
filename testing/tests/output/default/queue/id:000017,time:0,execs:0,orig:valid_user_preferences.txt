@@ -1,0 +1,23 @@
+# User preferences
+[user]
+username = john_doe
+email = john@example.com
+language = en_US
+theme = dark
+notifications_enabled = true
+
+[display]
+font_size = 14
+line_height = 1.5
+columns = 80
+color_scheme = monokai
+show_line_numbers = true
+wrap_lines = false
+
+[editor]
+tab_size = 4
+use_spaces = true
+auto_indent = true
+auto_save = true
+save_interval = 300
+
