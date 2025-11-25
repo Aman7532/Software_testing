@@ -1,5 +1,6 @@
 # Fuzz Testing Project - Configuration File Parser
 CSE 731 - Software Testing
+Github Repo - https://github.com/Aman7532/Software_testing/tree/main/testing
 
 ## Team Members
 - Aman Agarwal (MT2024017)
