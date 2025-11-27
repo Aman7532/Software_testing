@@ -16,9 +16,9 @@ We used **Claude AI (Anthropic)** in this project. Being honest about this:
 - Helping with the configuration parser source code (config_parser.c and config_parser.h)
 - Explaining and implementing the parser logic (functions, data structures, memory management)
 - Creating the test input files (corpus)
-- Writing the Makefile and run_fuzzer.sh script
 
 **What we did ourselves:**
+- Writing the Makefile and run_fuzzer.sh script
 - Running the fuzzing campaigns
 - Analyzing the results and understanding what crashes mean
 - Taking screenshots and documenting the process
